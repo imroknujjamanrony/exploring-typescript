@@ -45,3 +45,18 @@ let person={
 }
 
 person.name=34 // This will cause a type error in TypeScript because name is expected to be a string
+
+
+//explicitly defining types
+//these call explicit types
+let a: string;
+let b: number;
+let c:boolean;
+
+a='hello world'
+b=123;
+c=true;
+
+//array with explicit types
+let numbersArray: number[]=[];
+let mixedArray: (string | number | boolean)[] = []; //mixed type array

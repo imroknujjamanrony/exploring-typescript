@@ -33,3 +33,14 @@ let person = {
     isActive: true
 };
 person.name = 34; // This will cause a type error in TypeScript because name is expected to be a string
+//explicitly defining types
+//these call explicit types
+let a;
+let b;
+let c;
+a = 'hello world';
+b = 123;
+c = true;
+//array with explicit types
+let numbersArray = [];
+let mixedArray = []; //mixed type array
