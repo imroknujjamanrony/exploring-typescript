@@ -83,3 +83,37 @@ const sayHello=(user:{name:string,age:number})=>{
    type stringOrNumber=string | number; //we use it above parameter id
    type userType= {name: string;
     age:number} //we use it above parameter user we can say it is shortcut for the type of user object
+
+
+    //function signature
+let calculation:(a:number,b:number)=>number; // this means calculation is a function that takes two numbers and returns a number
+
+calculation=(a:number,b:number)=>{
+    return a+b;
+}
+
+
+//classes
+
+class Player{
+    name:string;
+    age:number;
+    country:string;
+
+
+    constructor(n:string,a:number,c:string){
+        this.name=n;
+        this.age=a;
+        this.country=c;
+    }
+
+    play(){
+        console.log(`${this.name} is playing`);
+    }
+}
+
+const masrafi=new Player('Masrafi','40','Bangladesh'); //if we send a string to age it will cause a type error in TypeScript because age is expected to be a number
+
+const players: Player[] = [];
+
+players.push(masrafi); //we can push masrafi to players array because players is an array of Player type
