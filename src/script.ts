@@ -60,3 +60,11 @@ c=true;
 //array with explicit types
 let numbersArray: number[]=[];
 let mixedArray: (string | number | boolean)[] = []; //mixed type array
+
+//function with explicit types
+const add=(a:number,b:number,c?:string)=>{ // c is an optional parameter
+    return a+b
+}
+
+console.log(add(4,'rony')); // This will cause a type error in TypeScript
+console.log(add(4,5)); // This will work fine

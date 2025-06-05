@@ -44,3 +44,8 @@ c = true;
 //array with explicit types
 let numbersArray = [];
 let mixedArray = []; //mixed type array
+//function with explicit types
+const add = (a, b) => {
+    return a + b;
+};
+console.log(add(4, 5));
