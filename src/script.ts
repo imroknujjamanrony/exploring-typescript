@@ -68,3 +68,18 @@ const add=(a:number,b:number,c?:string)=>{ // c is an optional parameter
 
 console.log(add(4,'rony')); // This will cause a type error in TypeScript
 console.log(add(4,5)); // This will work fine
+
+//type aliases
+const userDetails=( id:stringOrNumber,user:userType)=>{
+    console.log(`user id is ${id} and user details are ${user.name} and ${user.age}`)
+}
+
+const sayHello=(user:{name:string,age:number})=>{
+    console.log(`hello ${user.age > 50 ? 'sir' : 'mr.'} ${user.name}`)
+}
+    
+   //so now as we can see we have to write the same type again and again so we can use type aliases
+
+   type stringOrNumber=string | number; //we use it above parameter id
+   type userType= {name: string;
+    age:number} //we use it above parameter user we can say it is shortcut for the type of user object
