@@ -117,3 +117,6 @@ const masrafi=new Player('Masrafi','40','Bangladesh'); //if we send a string to 
 const players: Player[] = [];
 
 players.push(masrafi); //we can push masrafi to players array because players is an array of Player type
+
+
+//we have to learn more about classes and inheritance in TypeScript

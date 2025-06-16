@@ -45,7 +45,34 @@ c = true;
 let numbersArray = [];
 let mixedArray = []; //mixed type array
 //function with explicit types
-const add = (a, b) => {
+const add = (a, b, c) => {
     return a + b;
 };
-console.log(add(4, 5));
+console.log(add(4, 'rony')); // This will cause a type error in TypeScript
+console.log(add(4, 5)); // This will work fine
+//type aliases
+const userDetails = (id, user) => {
+    console.log(`user id is ${id} and user details are ${user.name} and ${user.age}`);
+};
+const sayHello = (user) => {
+    console.log(`hello ${user.age > 50 ? 'sir' : 'mr.'} ${user.name}`);
+};
+//function signature
+let calculation; // this means calculation is a function that takes two numbers and returns a number
+calculation = (a, b) => {
+    return a + b;
+};
+//classes
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} is playing`);
+    }
+}
+const masrafi = new Player('Masrafi', '40', 'Bangladesh'); //if we send a string to age it will cause a type error in TypeScript because age is expected to be a number
+const players = [];
+players.push(masrafi); //we can push masrafi to players array because players is an array of Player type
