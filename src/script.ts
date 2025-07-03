@@ -120,3 +120,11 @@ players.push(masrafi); //we can push masrafi to players array because players is
 
 
 //we have to learn more about classes and inheritance in TypeScript
+
+//interface PlayerInterface {
+//     name: string;
+//     age: number;
+//     country: string; 
+
+//     play(): void; //method signature
+// }
